@@ -1,0 +1,16 @@
+<div class="box">
+    <button *ngIf='carril.titulo!="Tarea Sin Catalogar"' (click)='delete()'>X</button>    
+    <h1>{{carril.titulo}}</h1>
+    <div class="tareaBox" *ngFor="let tarea of carril.listaTareas"> 
+        <app-tarea (cambioEstado)="cambioEstado($event)" [tarea]='tarea' [listaEstados]='listaEstados'></app-tarea>
+        <!-- <h1>{{tarea.titulo}}</h1>
+        <label for="task-status">
+            <strong>Estado</strong>
+            <select [(ngModel)]="status">
+            <option value="estado" *ngFor='let estado of listaEstados'>{{estado}}</option>
+            </select>
+        </label> -->
+    </div>
+</div>
+
+

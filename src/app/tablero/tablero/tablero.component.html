@@ -1,0 +1,17 @@
+<div class="colum">
+    <div *ngFor="let carril of listaCarriles">
+        <app-carril (cambioCarril)='cambioCarril($event)' (eliminarCarril)='eliminarCarril($event)' [carril]='carril' [listaEstados]='listaEstados'></app-carril>
+    </div>
+</div>
+<br/>
+
+<div class="container">
+    <div class="section">
+        <app-agregar  (onClick)="agregarTarea($event)"  [descripcion]="'Agregar Nueva Tarea'"></app-agregar>
+    </div>
+    <div class="section">
+        <app-agregar  (onClick)="agregarCarril($event)" [descripcion]="'Agregar Nueva Columna'"></app-agregar>
+    </div>
+</div>
+
+

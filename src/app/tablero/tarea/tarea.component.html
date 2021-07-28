@@ -1,0 +1,7 @@
+<div class="box">
+    <h3>{{tarea.titulo}}</h3>
+        <strong>Estado</strong>
+        <select [(ngModel)]="estado">
+            <option [value]="estado" *ngFor='let estado of listaEstados'>{{estado}}</option>
+        </select>
+</div>
